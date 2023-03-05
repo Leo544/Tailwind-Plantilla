@@ -5,9 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/output.css">
-    <title>Tailwind</title>
+    <title>Nintendo</title>
 </head>
 <body>
-    
+
+<!-- Contenedor PRINCIPAL -->
+<div class="container mx-auto ">
+    <nav class="bg-gray-800 flex justify-between lg:items-center items-center">
+      <div class="logo p-2 w-1/6">
+        <img src="../assets/img/logo.png" width="100">
+      </div>
+
+      <!-- Menu lg/md -->
+      <div class="links lg:block hidden w-1/6 md:w-4/6">
+        <ul class="menu flex items-center justify-center gap-5">
+          <li><a class="link link-hover" href="#">Home</a></li>
+          <li><a class="link link-hover" href="#">Juego Coopertativo</a></li>
+          <li><a class="link link-hover" href="#">Explorar</a></li>
+          <li><a class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full hover:bg-white hover:text-black transition duration-500" href="#">Super Mario Oddisey</a></li>
+          <li><a class="bg-red-500 p-3 rounded-full font-bold text-white hover:text-black hover:bg-white transition duration-500" href="#">Comprar Ahora</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu sm -->
+      <div class="block lg:hidden w-1/6 lg:w-4/6">
+        <a href="#" class="link link-hover" id="mobile-menu">Menu</a>
+        <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
+          <li><a class="link link-hover" href="#">Home</a></li>
+          <li><a class="link link-hover" href="#">Juego Coopertativo</a></li>
+          <li><a class="link link-hover" href="#">Explorar</a></li>
+          <li><a class="my-4 inline-block border-4 border-yellow-400 text-white font-bold p-2 rounded-full hover:bg-white hover:text-black transition duration-500" href="#">Super Mario Oddisey</a></li>
+          <li><a class="my-4 inline-block bg-red-500 p-3 rounded-full font-bold text-white hover:text-black hover:bg-white transition duration-500" href="#">Comprar Ahora</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- HEADER -->
+    <section class="header">
+      <img src="../assets/img/hero.jpg" alt="">
+    </section>
+
+    <!-- SEPARADOR -->
+    <section>
+      <div class="bg-wave-pattern h-6 bg-repeat-x relative -top-2"></div>
+      <div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center">
+        <a href="#" class="inline-block py-3 px-16 bg-black text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-300">Comprar Ahora</a>
+        <a href="#" class="inline-block py-3 px-16 bg-red-500 text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-300">Ver el Trailer</a>
+      </div>
+
+
+      <div class="bg-wave-pattern bg-repeat-x h-6 relative top-2"></div>
+    </section>
+
+    <section class="bg-red-500 h-6">
+    </section>
+
+</div>
+
 </body>
+
+<script>
+  const menuButton = document.querySelector('#mobile-menu');
+
+  menuButton.addEventListener('click', e => {
+    const menu = document.querySelector('.mobile-links');
+    menu.classList.toggle('hidden');
+  });
+</script>
 </html>
